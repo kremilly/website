@@ -1,0 +1,15 @@
+.content{
+	left: 50%;
+	width: 120vh;
+    display: flex;
+	margin-bottom: 4vh;
+	position: relative;
+	@include drop-shadow-sm();
+	justify-content: flex-start;
+	background-color: $firstColor;
+	transform: translate(-50%, 0);
+	border-radius: $border_radius_size;
+
+	@import "content/side-left";
+	@import "content/side-right";
+}

@@ -1,0 +1,13 @@
+@import 'autoload';
+html{ scroll-behavior: smooth; }
+
+body{
+	margin: 0;
+	padding: 0;
+	color: $fontColor;
+	font-family: $font;
+	font-size: $fontSize;
+	background: linear-gradient(90deg, $bgColor 0%, $firstColor 35%, $secondColor 100%);
+	
+	@import 'components/autoload';
+}

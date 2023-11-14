@@ -1,0 +1,50 @@
+.side-right{
+    width: 21vh;
+    float: right;
+    box-sizing: border-box;
+    border-left: $border_size solid $borderColor;
+    border-top-right-radius: $border_radius_size;
+    border-bottom-right-radius: $border_radius_size;
+
+    // TITLE OF SECTION
+    .label{
+        cursor: default;
+        line-height: 5vh;
+        font-size: 1.1em;
+        text-decoration: none;
+        border-top-right-radius: 1.25vh;
+        border-right: 1.5vh solid $blueColor;
+
+        @include icons{
+            width: 4vh;
+            text-align: center;
+        }
+    }
+
+    // BODY OF PULIBC APIS
+    .body{
+        padding-bottom: 2vh;
+        font-size: $smallFont + .1;
+
+        a{
+            color: inherit;
+            display: block;
+            line-height: 4vh;
+            padding-left: 1vh;
+            text-decoration: none;
+
+            @include icons{
+                width: 3vh;
+                opacity: 0;
+                float: right;
+                line-height: 4vh;
+                text-align: center;
+            }
+
+            @include hover($secondColor) {
+                text-decoration: underline;
+                @include icons{ opacity: 1; }
+            }
+        }
+    }
+}

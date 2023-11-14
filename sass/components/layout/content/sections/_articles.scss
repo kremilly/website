@@ -1,0 +1,46 @@
+.articles-area{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+
+    .article{
+        margin: 1vh;
+        width: 30.5vh;
+        color: inherit;
+        cursor: pointer;
+        border-radius: 1vh;
+        text-decoration: none;
+        box-sizing: border-box;
+        background: $firstColor;
+
+        img{
+            width: 100%;
+            border-top-left-radius: $border_radius_size;
+            border-top-right-radius: $border_radius_size;
+        }
+
+        .title{
+            padding: 1vh;
+            font-size: 1.5vh;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .description{
+            font-size: 1.35vh;
+            font-weight: .75vh;
+            padding: 1vh 2vh 1vh 2vh;
+        }
+
+        @include hover($bgColor);
+    }
+
+    .no-articles{
+        width: 100%;
+        opacity: .75;
+        font-size: 2vh;
+        cursor: default;
+        text-align: center;
+        padding: 2vh 1vh 2vh 1vh;
+    }
+}

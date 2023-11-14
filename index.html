@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kremilly</title>
+    <link rel="stylesheet" href="./dist/index.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div class="user-info" id="user-info">
+        <div class="avatar">
+            <img id="user-info-avatar">
+        </div>
+
+        <div class="name" id="user-info-name"></div>
+
+        <nav>
+            <div class="bio" id="user-info-bio"></div>
+
+            <a href="#" target="_blank" class="fab fa-github" id="user-info-github"></a>
+            <a href="#" target="_blank" class="fab fa-dev" id="user-info-blog"></a>
+            <a href="#" target="_blank" class="fab fa-x-twitter" id="user-info-twitter"></a>
+        </nav>
+    </div>
+
+    <div class="content">
+        <div class="side-left">
+            <div class="btlr label">
+                <div class="fas fa-sitemap"></div>
+                Featured projects
+
+                <a href="#" target="_blank" class="button" id="pinned-repos-button">
+                    See more
+                    <div class="fab fa-github"></div>
+                </a>
+            </div>
+
+            <div class="pinned-repos" id="pinned-repos"></div>
+
+            <div class="label">
+                <div class="fas fa-newspaper"></div>
+                Articles
+
+                <a href="#" target="_blank" class="button" id="blog-button">
+                    See more
+                    <div class="fab fa-dev"></div>
+                </a>
+            </div>
+            
+            <div class="articles-area" id="body-articles"></div>
+        </div>
+
+        <div class="side-right">
+            <div class="label">
+                <div class="fas fa-screwdriver-wrench"></div>
+                My Public API's
+            </div>
+
+            <div class="body" id="body-public-apis"></div>
+        </div>
+    </div>
+
+    <script src="./dist/index.js"></script>
+</body>
+</html>

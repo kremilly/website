@@ -1,0 +1,45 @@
+.side-left{
+    left: 0;
+    width: 98.8vh;
+    border-top-left-radius: $border_radius_size;
+    border-bottom-left-radius: $border_radius_size;
+
+    // TITLE OF SECTION
+    .label{
+        cursor: default;
+        line-height: 5vh;
+        font-size: 1.1em;
+        text-decoration: none;
+        border-left: 1.5vh solid $blueColor;
+
+        @include icons{
+            width: 4vh;
+            color: $blueColor;
+            text-align: center;
+        }
+
+        .button{
+            float: right;
+            outline: none;
+            color: inherit;
+            cursor: pointer;
+            padding-left: 1vh;
+            padding-right: 1vh;
+            text-decoration: none;
+
+            @include hover($secondColor);
+            @include icons{ color: inherit; }
+        }
+    }
+
+    // PINNED REPOSITORIES
+    @import "sections/pinned-repos";
+
+    // ARTICLES
+    @import "sections/articles";
+
+    // BORDER-RADIUS TOP SIDE
+    .btlr{ border-top-left-radius: $border_radius_size; }
+    .bblr{ border-bottom-left-radius: $border_radius_size; }
+
+}

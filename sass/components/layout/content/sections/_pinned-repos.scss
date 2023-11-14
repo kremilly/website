@@ -1,0 +1,85 @@
+.pinned-repos{
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: .5vh;
+    align-items: flex-start;
+
+    .project{
+        margin: 1vh;
+        width: 30.5vh;
+        height: 22.3vh;
+        cursor: pointer;
+        border-radius: 1vh;
+        box-sizing: border-box;
+        background: $firstColor;
+
+        .name{
+            font-size: 1.5vh;
+            font-weight: bold;
+            padding: 1.3vh 1vh 1.3vh 1vh;
+
+            .stats{
+                float: right;
+
+                .stars, .forks{
+                    float: left;
+                    text-align: center;
+                    padding-left: .75vh;
+                    padding-right: .5vh;
+                    border-right: $border_size solid $borderColor;
+
+                    @include icons{
+                        float: right;
+                        margin-left: .75vh;
+                    }
+
+                    .fa-star{ color: gold; }
+                    .fa-code-fork{ color: $blueColor; }
+                    &:last-child{ border-color: transparent; }
+                }
+            }
+        }
+
+        .description{
+            height: 8vh;
+            display: flex;
+            line-height: 1.5;
+            font-size: 1.35vh;
+            font-weight: .75vh;
+            text-align: center;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+            padding: 1vh 2vh 1vh 2vh;
+        }
+
+        .languages{
+            font-size: 1vh;
+            text-align: center;
+            padding: 1vh 2vh 1vh 2vh;
+
+            .lang{
+                text-align: center;
+                margin-bottom: .5vh;
+                border-radius: .5vh;
+                display: inline-block;
+                padding: .75vh .8vh .75vh .8vh;
+                border: $border_size solid transparent;
+                @include hover($blueColor, inherit, $borderColor);
+            }
+        }
+
+        .link{
+            outline: none;
+            color: inherit;
+            font-size: 1.35vh;
+            font-weight: .75vh;
+            text-align: center;
+            text-decoration: none;
+            padding: 1.5vh 10.08vh 1.5vh 10.08vh;
+            &:hover, &:focus{ text-decoration: underline; }
+        }
+
+        @include hover($bgColor);
+    }
+}
