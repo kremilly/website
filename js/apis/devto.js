@@ -1,5 +1,9 @@
 const devto = () => {
-    fetch(`https://dev.to/api/articles?username=kremilly`).then(
+    fetch(`https://dev.to/api/articles?username=kremilly`, {
+        "headers": {
+            "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-"
+        }
+    }).then(
         json => json.json()
     ).then(response => {
         if (response == "") {
