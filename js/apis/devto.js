@@ -6,7 +6,9 @@ const devto = () => {
     }).then(
         json => json.json()
     ).then(response => {
-        if (response == "") {
+        console.log(response)
+
+        if (response.lenght > 0) {
             El.append("#body-articles", `
                 <div class="no-articles">No articles yet</div>
             `);
