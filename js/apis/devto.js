@@ -24,7 +24,7 @@ const devto = () => {
                     }
     
                     El.append("#body-articles", `
-                        <a href="${ article.url }" class="article">
+                        <a href="${ article.url }" target="_blank" class="article">
                             ${ cover }
                             <div class="title">${ article.title }</div>
                             <div class="description">${ article.description }</div>
