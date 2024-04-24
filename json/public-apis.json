@@ -1,10 +1,14 @@
 [
     {
-      "name": "pdfThumb",
-      "url": "https://pdf-thumb-eight.vercel.app/"
+      "name": "PDFThumb",
+      "url": "https://github.com/kremilly/pdfThumb"
     },
     {
-      "name": "ghPinnedAPI",
-      "url": "https://gh-pinned-api.vercel.app"
-    }
+      "name": "GHPinnedAPI",
+      "url": "https://github.com/kremilly/ghPinnedAPI"
+    },
+    {
+      "name": "ApiWikipedia",
+      "url": "https://github.com/kremilly/ApiWikipedia"
+    },
 ]
