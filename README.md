@@ -2,7 +2,7 @@
 
 My website hosted at GitHub pages
 
-[https://kremilly.github.io/website/](https://kremilly.github.io/website/)
+[kremilly.com](https://kremilly.com)
 
 ## Tecnologias usadas
 
