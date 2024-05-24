@@ -7,35 +7,6 @@
 	align-items: center;
 	transform: translate(-50%, 0);
 
-	.name{
-		color: inherit;
-		font-size: 3vh;
-		cursor: pointer;
-		font-weight: bold;
-		text-decoration: none;
-		justify-content: flex-start;
-
-		&:hover, &:focus{
-			background-clip: text;
-			-webkit-background-clip: text;
-			-webkit-text-fill-color: transparent;
-			background-image: -webkit-linear-gradient(45deg, #274b74 0%, #8233c5 33%, #e963fd 67%);
-		}
-	}
-
-	.avatar{
-		margin-right: 1.3vh;
-		justify-content: flex-start;
-		
-		img{
-			width: 6vh;
-			cursor: pointer;
-			border-radius: 50%;
-			border: $border_size solid $borderColor;
-			&:hover, &:focus{ @include filter-sepia(50%); }
-		}
-	}
-
 	nav{
 		margin-left: auto;
 		justify-content: flex-end;
