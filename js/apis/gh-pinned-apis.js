@@ -1,5 +1,5 @@
 const gh_pinned_api = () => {
-    fetch(`https://gh-pinned-api.vercel.app/api?user=kremilly`).then(
+    fetch(`https://api.kremilly.com/github?user=kremilly`).then(
         json => json.json()
     ).then(response => {
         response.forEach(item => {

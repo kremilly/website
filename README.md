@@ -1,12 +1,5 @@
-# website
-
-My website hosted at GitHub pages
+# Kremilly
 
 [kremilly.com](https://kremilly.com)
 
-## Tecnologias usadas
-
-* HTML
-* JavaScript
-* SASS
-* CSS 3
+[api.kremilly.com](https://api.kremilly.com) (My API's portal)
