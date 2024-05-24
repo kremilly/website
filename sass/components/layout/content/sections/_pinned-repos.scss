@@ -5,7 +5,7 @@
     align-items: flex-start;
 
     .project{
-        margin: 1vh;
+        margin: .5vh;
         height: auto;
         width: 30.5vh;
         color: inherit;
@@ -13,6 +13,7 @@
         text-decoration: none;
         box-sizing: border-box;
         background: $firstColor;
+        border: $border_size solid transparent;
 
         .name{
             font-size: 1.5vh;
@@ -66,6 +67,7 @@
                 padding: .75vh .8vh .75vh .8vh;
 
                 @include hover($secondColor, inherit) {
+                    text-transform: uppercase;
                     text-decoration: underline;
                 }
             }
@@ -82,6 +84,10 @@
             &:hover, &:focus{ text-decoration: underline; }
         }
 
-        @include hover($secondColor);
+        @include hover($secondColor) {
+            @include drop-shadow-md;
+            border: $border_size solid $borderColor;
+            border-left: .5em solid $borderColor !important;
+        }
     }
 }

@@ -11,6 +11,7 @@
         text-decoration: none;
         box-sizing: border-box;
         background: $firstColor;
+        border: $border_size solid transparent;
 
         img{
             width: 100%;
@@ -26,10 +27,15 @@
         .description{
             font-size: 1.35vh;
             font-weight: .75vh;
+            text-align: center;
             padding: 1vh 2vh 1vh 2vh;
         }
 
-        @include hover($secondColor);
+        @include hover($secondColor) {
+            @include drop-shadow-md;
+            border: $border_size solid $borderColor;
+            border-left: .5em solid $borderColor !important;
+        }
     }
 
     .no-articles{

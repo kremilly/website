@@ -1,7 +1,9 @@
 .side-right{
-    width: 21vh;
+    width: 21.9vh;
     float: right;
+    font-weight: bold;
     box-sizing: border-box;
+    background: $secondColor;
     border-left: $border_size solid $borderColor;
 
     // TITLE OF SECTION
@@ -35,6 +37,7 @@
             line-height: 4vh;
             padding-left: 1vh;
             text-decoration: none;
+            border: $border_size solid transparent;
 
             @include icons{
                 width: 3vh;
@@ -44,8 +47,10 @@
                 text-align: center;
             }
 
-            @include hover($secondColor) {
-                text-decoration: underline;
+            @include hover($firstColor) {
+                text-decoration: none;
+                color: $hoverLinkColor;
+                border-left: .5em solid $borderColor;
                 @include icons{ opacity: 1; }
             }
         }
