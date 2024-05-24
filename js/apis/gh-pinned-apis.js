@@ -1,5 +1,5 @@
-const gh_pinned_api = () => {
-    fetch(`https://api.kremilly.com/github?user=kremilly`).then(
+async function gh_pinned_api() {
+    await fetch(`https://api.kremilly.com/github?user=kremilly`).then(
         json => json.json()
     ).then(response => {
         response.forEach(item => {

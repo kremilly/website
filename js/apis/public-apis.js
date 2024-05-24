@@ -1,5 +1,5 @@
-const public_apis = () => {
-    fetch(`https://api.kremilly.com/json`).then(
+async function public_apis() {
+    await fetch(`https://api.kremilly.com/json`).then(
         response => response.json()
     ).then(data => {
         data.list.forEach(item => {
