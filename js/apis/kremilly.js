@@ -2,8 +2,8 @@ const Kremilly = ( e => {
     
     let apiUri = 'https://api.kremilly.com/';
 
-    let apis = async () => {
-        await fetch(`${apiUri}json`).then(
+    let apis = () => {
+        fetch(`${apiUri}json`).then(
             response => response.json()
         ).then(data => {
             data.list.forEach(item => {
@@ -19,8 +19,8 @@ const Kremilly = ( e => {
         })
     }
 
-    let pinned = async (username) => {
-        await fetch(`${apiUri}github?user=${username}`).then(
+    let pinned = (username) => {
+        fetch(`${apiUri}github?user=${username}`).then(
             json => json.json()
         ).then(response => {
             response.forEach(item => {

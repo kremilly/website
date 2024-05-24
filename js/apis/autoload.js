@@ -2,8 +2,8 @@ const Autoload = ( e => {
     
     let ghUsername = 'kremilly'
 
-    let github = async () => {
-        await fetch(`https://api.github.com/users/${ghUsername}`).then(
+    let github = () => {
+        fetch(`https://api.github.com/users/${ghUsername}`).then(
             json => json.json()
         ).then(response => {
             Kremilly.apis()
@@ -27,8 +27,8 @@ const Autoload = ( e => {
         })
     }
     
-    let devto = async (username) => {
-        await fetch(`https://dev.to/api/articles?username=${username}`, {
+    let devto = (username) => {
+        fetch(`https://dev.to/api/articles?username=${username}`, {
             "headers": {
                 "accept": "text/html,application/xhtml+xml,application/xmlq=0.9,image/avif,image/webp,image/apng,*/*q=0.8,application/signed-"
             }
