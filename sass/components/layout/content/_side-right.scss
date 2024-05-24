@@ -15,6 +15,13 @@
         border-top-right-radius: 1.25vh;
         border-right: 1.5vh solid $blueColor;
 
+        a{
+            color: inherit;
+            cursor: pointer;
+            text-decoration: none;
+            &:hover, &:focus{ text-decoration: underline; }
+        }
+
         @include icons{
             width: 4vh;
             text-align: center;
