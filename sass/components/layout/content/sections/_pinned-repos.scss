@@ -6,10 +6,10 @@
 
     .project{
         margin: 1vh;
+        height: auto;
         width: 30.5vh;
-        height: 22.3vh;
-        cursor: pointer;
         color: inherit;
+        cursor: pointer;
         text-decoration: none;
         box-sizing: border-box;
         background: $firstColor;
@@ -42,7 +42,7 @@
         }
 
         .description{
-            height: 8vh;
+            height: 11vh;
             display: flex;
             line-height: 1.5;
             font-size: 1.35vh;
@@ -62,11 +62,12 @@
             .lang{
                 text-align: center;
                 margin-bottom: .5vh;
-                border-radius: .5vh;
                 display: inline-block;
                 padding: .75vh .8vh .75vh .8vh;
-                border: $border_size solid transparent;
-                @include hover($blueColor, inherit, $borderColor);
+
+                @include hover($secondColor, inherit) {
+                    text-decoration: underline;
+                }
             }
         }
 

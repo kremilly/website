@@ -4,7 +4,7 @@ const gh_pinned_api = () => {
     ).then(response => {
         response.forEach(item => {
             El.append("#pinned-repos", `
-                <div class="project">
+                <div class="project" onclick="window.open('${item.url}', '_blank');">
                     <div class="name">
                         ${ item.name }
                         
@@ -24,8 +24,6 @@ const gh_pinned_api = () => {
                     <div class="languages">
                         ${Array.isArray(item.languages) ? item.languages.map(lang => `<div class='lang'>${lang}</div>`).join('') : ''}
                     </div>
-                    
-                    <a href="${ item.url }" target="_blank" class="link">GitHub project</a>
                 </div>
             `);
         });
