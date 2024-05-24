@@ -4,11 +4,10 @@
     display: flex;
 	margin-bottom: 4vh;
 	position: relative;
-	@include drop-shadow-sm();
 	justify-content: flex-start;
 	background-color: $firstColor;
 	transform: translate(-50%, 0);
-	border-radius: $border_radius_size;
+	border: $border_size solid $borderColor;
 
 	@import "content/side-left";
 	@import "content/side-right";

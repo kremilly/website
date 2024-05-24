@@ -9,7 +9,8 @@
         width: 30.5vh;
         height: 22.3vh;
         cursor: pointer;
-        border-radius: 1vh;
+        color: inherit;
+        text-decoration: none;
         box-sizing: border-box;
         background: $firstColor;
 
@@ -80,6 +81,6 @@
             &:hover, &:focus{ text-decoration: underline; }
         }
 
-        @include hover($bgColor);
+        @include hover($secondColor);
     }
 }

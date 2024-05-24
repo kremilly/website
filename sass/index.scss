@@ -7,7 +7,7 @@ body{
 	color: $fontColor;
 	font-family: $font;
 	font-size: $fontSize;
-	background: linear-gradient(90deg, $bgColor 0%, $firstColor 35%, $secondColor 100%);
+	background: $bgColor;
 	
 	@import 'components/autoload';
 }

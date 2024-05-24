@@ -1,8 +1,6 @@
 .side-left{
     left: 0;
     width: 98.8vh;
-    border-top-left-radius: $border_radius_size;
-    border-bottom-left-radius: $border_radius_size;
 
     // TITLE OF SECTION
     .label{
@@ -10,11 +8,10 @@
         line-height: 5vh;
         font-size: 1.1em;
         text-decoration: none;
-        border-left: 1.5vh solid $blueColor;
+        background: $secondColor;
 
         @include icons{
             width: 4vh;
-            color: $blueColor;
             text-align: center;
         }
 
@@ -27,7 +24,7 @@
             padding-right: 1vh;
             text-decoration: none;
 
-            @include hover($secondColor);
+            @include hover($firstColor);
             @include icons{ color: inherit; }
         }
     }

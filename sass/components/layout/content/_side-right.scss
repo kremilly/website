@@ -3,8 +3,6 @@
     float: right;
     box-sizing: border-box;
     border-left: $border_size solid $borderColor;
-    border-top-right-radius: $border_radius_size;
-    border-bottom-right-radius: $border_radius_size;
 
     // TITLE OF SECTION
     .label{
@@ -12,8 +10,6 @@
         line-height: 5vh;
         font-size: 1.1em;
         text-decoration: none;
-        border-top-right-radius: 1.25vh;
-        border-right: 1.5vh solid $blueColor;
 
         a{
             color: inherit;
