@@ -1,13 +1,21 @@
 const Kremilly = ( e => {
     
-    let apiUri = 'https://api.kremilly.com/';
+    let cargoUser = 'kremilly'
+    let librariesKey = '0f3a99c9b683638ea3e7295db368fa0c'
+
+    let apiUri = 'https://api.kremilly.com';
 
     let apis = () => {
-        fetch(`${apiUri}json`).then(
+        Classes.add("#apisTab", "actived")
+        Classes.remove("#cratesTab", "actived")
+
+        fetch(`${apiUri}/json`).then(
             response => response.json()
         ).then(data => {
+            El.empty('#body-list')
+
             data.list.forEach(item => {
-                El.append("#body-public-apis", `
+                El.append("#body-list", `
                     <a href="${item.wiki}" target="_blank" class="api">
                         ${_.capitalize(item.name)}
                         <div class="fas fa-external-link"></div>
@@ -19,8 +27,30 @@ const Kremilly = ( e => {
         })
     }
 
+    let crates = () => {
+        Classes.add("#cratesTab", "actived")
+        Classes.remove("#apisTab", "actived")
+
+        fetch(`https://libraries.io/api/search?q=${cargoUser}&platforms=cargo&api_key=${librariesKey}`).then(
+            response => response.json()
+        ).then(data => {
+            El.empty('#body-list')
+
+            data.forEach(item => {
+                El.append("#body-list", `
+                    <a href="${item.package_manager_url}" target="_blank" class="api">
+                        ${_.capitalize(item.name)}
+                        <div class="fas fa-external-link"></div>
+                    </a>
+                `)
+            })
+        }).catch(error => {
+            console.error('Error fetching data:', error)
+        })
+    }
+
     let pinned = (username) => {
-        fetch(`${apiUri}github?user=${username}`).then(
+        fetch(`${apiUri}/github?user=${username}`).then(
             json => json.json()
         ).then(response => {
             response.forEach(item => {
@@ -55,6 +85,7 @@ const Kremilly = ( e => {
         apiUri: apiUri,
 
         apis: () => { return apis(); },
+        crates: () => { return crates(); },
         pinned: (username) => { return pinned(username); },
     };
 

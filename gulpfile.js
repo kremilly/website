@@ -8,7 +8,7 @@ var gulp    	= 	require('gulp'), // Gulp
 // Minify e concate scripts
 gulp.task('js-compiler', e => {
 	return gulp.src([
-		'js/**/*.js', '!js/**/index.js'
+		'js/**/*.js'
 	])
 	.pipe(plumber())
 	.pipe(babel({

@@ -3,6 +3,7 @@
     flex-wrap: wrap;
     padding-left: .5vh;
     align-items: flex-start;
+    justify-content: center;
 
     .project{
         margin: .5vh;
@@ -64,6 +65,7 @@
                 text-align: center;
                 margin-bottom: .5vh;
                 display: inline-block;
+                text-transform: lowercase;
                 padding: .75vh .8vh .75vh .8vh;
 
                 @include hover($secondColor, inherit) {

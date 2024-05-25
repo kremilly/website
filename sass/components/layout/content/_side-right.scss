@@ -7,23 +7,36 @@
     border-left: $border_size solid $borderColor;
 
     // TITLE OF SECTION
-    .label{
-        cursor: default;
+    .header{
+        height: 5vh;
         line-height: 5vh;
-        font-size: 1.1em;
-        text-decoration: none;
+        border-bottom: $border_size solid $borderColor;
 
-        a{
-            color: inherit;
+        .tab{
+            width: 50%;
+            float: left;
             cursor: pointer;
+            line-height: 5vh;
+            text-align: center;
             text-decoration: none;
-            &:hover, &:focus{ text-decoration: underline; }
+            box-sizing: border-box;
+    
+            a{
+                color: inherit;
+                cursor: pointer;
+                text-decoration: none;
+            }
+    
+            @include icons{
+                width: 4vh;
+                text-align: center;
+            }
+
+            @include hover($firstColor);
+            &:first-child{ border-right: $border_size solid $borderColor; }
         }
 
-        @include icons{
-            width: 4vh;
-            text-align: center;
-        }
+        .actived{ background: $firstColor; }
     }
 
     // BODY OF PULIBC APIS
@@ -37,6 +50,7 @@
             line-height: 4vh;
             padding-left: 1vh;
             text-decoration: none;
+            border-right: none !important;
             border: $border_size solid transparent;
 
             @include icons{
