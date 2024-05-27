@@ -28,18 +28,20 @@ const Kremilly = ( e => {
     }
 
     let crates = () => {
+        let userId = 232087
+
         Classes.add("#cratesTab", "actived")
         Classes.remove("#apisTab", "actived")
 
-        fetch(`https://libraries.io/api/search?q=${cargoUser}&platforms=cargo&api_key=${librariesKey}`).then(
+        fetch(`https://crates.io/api/v1/crates?user_id=${ userId }`).then(
             response => response.json()
         ).then(data => {
             El.empty('#body-list')
 
-            data.forEach(item => {
+            data.crates.forEach(crate => {
                 El.append("#body-list", `
-                    <a href="${item.package_manager_url}" target="_blank" class="api">
-                        ${_.capitalize(item.name)}
+                    <a href="https://crates.io/crates/${crate.name}" target="_blank" class="api">
+                        ${_.capitalize(crate.name)}
                         <div class="fas fa-external-link"></div>
                     </a>
                 `)
