@@ -33,8 +33,7 @@
 
         @include hover($secondColor) {
             @include drop-shadow-md;
-            border: $border_size solid $borderColor;
-            border-left: .5em solid $borderColor !important;
+            border-color: $borderColor;
         }
     }
 

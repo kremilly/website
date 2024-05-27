@@ -1,11 +1,27 @@
 .user-info{
 	left: 50%;
-    height: 10vh;
-	width: 120vh;
+	width: 100%;
     display: flex;
+    height: 3.5em;
 	position: relative;
 	align-items: center;
+	background: $firstColor;
+	@include drop-shadow-sm;
 	transform: translate(-50%, 0);
+
+	.logo {
+		float: left;
+		height: 100%;
+		width: 2.5em;
+		outline: none;
+		cursor: pointer;
+		margin-right: auto;
+		background-size: 70%;
+		box-sizing: border-box;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-image: url($logo);
+	}
 
 	nav{
 		margin-left: auto;
@@ -34,7 +50,6 @@
 				font-weight: bold;
 				text-transform: uppercase;
 				text-decoration: underline;
-				animation: text-color 1s infinite;
 
 				.emoji{
 					opacity: 1;
@@ -53,16 +68,13 @@
 
 		@include icons {
 			float: left;
+			padding: 2vh;
 			color: inherit;
 			cursor: pointer;
 			font-size: 1.6vh;
 			text-decoration: none;
 			box-sizing: border-box;
-			padding: 2vh 2vh 2vh 2vh;
-
-			@include hover($secondColor) {
-				@include drop-shadow-md;
-			};
+			@include hover($secondColor);
 		}
 	}
 }
@@ -73,9 +85,4 @@
     50% { opacity: 0.5; }
     75% { opacity: 0.75; }
     100% { opacity: 1; }
-}
-
-@keyframes text-color {
-    0% { color: inherit; }
-    100% { color: $hoverLinkColor; }
 }

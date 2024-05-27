@@ -1,6 +1,6 @@
 .side-right{
-    width: 21.9vh;
     float: right;
+    width: 21.9vh;
     font-weight: bold;
     box-sizing: border-box;
     background: $secondColor;
@@ -33,7 +33,6 @@
             }
 
             @include hover($firstColor);
-            &:first-child{ border-right: $border_size solid $borderColor; }
         }
 
         .actived{ background: $firstColor; }
@@ -63,7 +62,6 @@
 
             @include hover($firstColor) {
                 text-decoration: none;
-                color: $hoverLinkColor;
                 border-left: .5em solid $borderColor;
                 @include icons{ opacity: 1; }
             }

@@ -6,8 +6,7 @@
 	position: relative;
 	justify-content: flex-start;
 	background-color: $firstColor;
-	transform: translate(-50%, 0);
-	border: $border_size solid $borderColor;
+	transform: translate(-50%, 5%);
 
 	@import "content/side-left";
 	@import "content/side-right";
