@@ -1,7 +1,6 @@
 const Kremilly = ( e => {
     
-    let cargoUser = 'kremilly'
-    let librariesKey = '0f3a99c9b683638ea3e7295db368fa0c'
+    let userId = 232087
 
     let apiUri = 'https://api.kremilly.com';
 
@@ -28,8 +27,6 @@ const Kremilly = ( e => {
     }
 
     let crates = () => {
-        let userId = 232087
-
         Classes.add("#cratesTab", "actived")
         Classes.remove("#apisTab", "actived")
 
